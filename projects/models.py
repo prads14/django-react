@@ -2,11 +2,13 @@ from django.db import models
 
 # Create your models here.
 
+
 class Project(models.Model):
     name = models.CharField(max_length=100)
     client = models.CharField(max_length=100)
     start_date = models.DateField(blank=True, null=True)
     end_date = models.DateField(blank=True, null=True)
+    status = models.ForeignKey('ProjectStatus', null=True, on_delete=models.SET_NULL)
 
 
 class ProjectStatus(models.Model):

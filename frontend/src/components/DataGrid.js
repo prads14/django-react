@@ -33,6 +33,11 @@ class DataGrid extends Component {
                     headerName: 'End Date',
                     width: 90,
                 },
+                {
+                    field: 'status',
+                    headerName: 'Status',
+                    width: 100
+                }
             ],
             defaultColDef: { resizable: true },
             rowData: null,

@@ -6,5 +6,5 @@ from .serializers import ProjectSerializer
 from rest_framework import generics
 
 class ProjectListCreate(generics.ListCreateAPIView):
-    queryset = Project.objects.all()
+    queryset = Project.objects.select_related('status')
     serializer_class = ProjectSerializer
